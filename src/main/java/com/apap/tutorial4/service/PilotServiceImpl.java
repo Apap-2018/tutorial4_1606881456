@@ -31,4 +31,14 @@ public class PilotServiceImpl implements PilotService {
 		pilotDb.deleteById(idPilot);
 		
 	}
+
+	@Override
+	public void updatePilot(PilotModel pilot, String licenseNumber) {
+		// TODO Auto-generated method stub
+		PilotModel newPilot = pilotDb.findByLicenseNumber(licenseNumber);
+		newPilot.setName(pilot.getName());
+		newPilot.setFlyHour(pilot.getFlyHour());
+		pilotDb.save(newPilot);
+	}
+
 }

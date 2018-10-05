@@ -9,4 +9,7 @@ public interface PilotService {
 	
 	//method untuk menghapus pilot
 	void deletePilot(Long idPilot);
+	
+	//method untuk mengupdate pilot
+	void updatePilot(PilotModel pilot, String licenseNumber);
 }

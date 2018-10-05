@@ -11,5 +11,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface FlightDb extends JpaRepository<FlightModel, Long>{
+	FlightModel findFlightById(Long id);
+	FlightModel findFlightByFlightNumber(String flightNumber);
 
 }
